@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senhas Guinu</title>
+    <style>
+        
+        body { 
+            font-family: sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background-image: url('assets/vector.jpg'); 
+            background-size: cover; /* Para cobrir toda a tela */
+            background-position: center; /* Para centralizar a imagem */
+        }
+        .container { background: rgb(147, 141, 141); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+        h1 { margin-top: 0; }
+        .form-group { margin-bottom: 1rem; }
+        label { margin-right: 0.5rem; }
+        input { padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc; }
+        button { padding: 0.7rem 1.5rem; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; font-size: 1rem; }
+        button:hover { background-color: #0056b3; }
+        #resultado { margin-top: 1.5rem; text-align: left; background-color: #e9ecef; padding: 1rem; border-radius: 4px; white-space: pre-wrap; font-family: monospace; }
+        #erro { color: red; margin-top: 1rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerador de Senhas</h1>
+        <div class="form-group">
+            <label for="dia">Dia:</label>
+            <input type="number" id="dia" name="dia" min="1" max="31" placeholder="dd">
+            <label for="mes">Mês:</label>
+            <input type="number" id="mes" name="mes" min="9" max="12" placeholder="mm (9-12)">
+        </div>
+        <button id="gerarSenha">Gerar Senhas</button>
+
+        <p id="erro"></p>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
